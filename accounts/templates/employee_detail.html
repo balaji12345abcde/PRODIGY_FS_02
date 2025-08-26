@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ employee.name }}</h2>
+<ul class="list-group">
+    <li class="list-group-item"><strong>Email:</strong> {{ employee.email }}</li>
+    <li class="list-group-item"><strong>Position:</strong> {{ employee.position }}</li>
+    <li class="list-group-item"><strong>Salary:</strong> {{ employee.salary }}</li>
+    <li class="list-group-item"><strong>Date Joined:</strong> {{ employee.date_joined }}</li>
+</ul>
+<a href="{% url 'employee_update' employee.pk %}" class="btn btn-primary mt-3">Edit</a>
+<a href="{% url 'employee_list' %}" class="btn btn-secondary mt-3">Back</a>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            background: url("{% static 'images/R.jpeg'%}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            place-items: center;
+        }
+
+        form {
+            position: fixed;
+            width: 250px;
+            height: 250px;
+            border: none;
+            display: grid;
+            justify-content: center;
+            justify-items: center;
+            padding: 20px 30px;
+            border-radius: 5px;
+            background-color: rgba(213, 229, 238, 0.7);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            width: 100px;
+            border-radius: 5px;
+            background-color: rgba(245, 245, 241, 0.862);
+            margin: 7px;
+            border: none;
+            height: 27px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        form button:hover {
+            background-color: rgb(162, 222, 238);
+        }
+
+        input {
+            margin: 5px;
+            padding: 0px;
+            background-color: rgba(242, 239, 239, 0.985);
+            border: none;
+            width: 230px;
+            border-radius: 5px;
+            box-shadow: 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        label {
+            font-weight: bold;
+            position: relative;
+            right: 40%;
+            margin: auto;
+        }
+
+        a {
+            margin: 5px;
+            color: blue;
+        }
+
+        h1 {
+            position: absolute;
+            top: 0;
+            color: rgb(25, 120, 221);
+            font-weight: bold;
+            text-shadow: 2px 2.1px 5px rgba(67, 119, 218, 0.916);
+        }
+
+        div {
+            color: red;
+            position: absolute;
+            bottom: 15%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Blue Moon</h1>
+    <form action="" method="POST">
+        {% csrf_token%}
+        <label>Usrname:</label>
+        {{form.username}}
+        <label>Password:</label>
+        {{form.password}}
+        <button type="submit">submit</button>
+        <a href="{% url 'signup'%}">New User</a>
+    </form>
+    <div>{{form.non_field_errors}}</div>
+</body>
+
+</html>
