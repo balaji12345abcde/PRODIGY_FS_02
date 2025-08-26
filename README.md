@@ -91,9 +91,8 @@ Employees data is securely stored in the database.
 Admin credentials are managed via Django’s authentication system.
 
 📸 Screenshots
-
-![Image](https://github.com/user-attachments/assets/9a85d2c8-83c5-4517-81f7-ff208638e420)
 ![Image](https://github.com/user-attachments/assets/3e6686ba-2589-4af6-8ed8-6240d9bef36a)
+![Image](https://github.com/user-attachments/assets/9a85d2c8-83c5-4517-81f7-ff208638e420)
 ![Image](https://github.com/user-attachments/assets/7ab95d42-542b-4065-b043-f4d7d050fa91)
 ![Image](https://github.com/user-attachments/assets/ab4b7245-a76d-4d92-8414-a6e06d8b283b)
 
